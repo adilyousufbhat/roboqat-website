@@ -576,7 +576,7 @@ a.cbox:hover{transform:translateY(-3px);box-shadow:0 18px 36px -22px rgba(23,23,
   .sticky-cta{transform:none}
 }
 .robo .face{display:grid;place-items:center;width:100%;height:100%;transition:transform .25s var(--ease)}
-/* official logo (roboqat-logo1-horizontal.svg, inlined) */
+/* header/footer logo (inlined lockup, see v4 block) */
 .logo svg.brand{height:44px;width:auto;aspect-ratio:624/196}
 .foot .logo svg.brand{height:52px;width:auto}
 @media (max-width:400px){.logo svg.brand{height:38px;width:auto}}
@@ -682,10 +682,10 @@ a.cbox:hover{transform:translateY(-3px);box-shadow:0 18px 36px -22px rgba(23,23,
 .enrol-sec .wrap::before{content:"";position:absolute;z-index:-1;inset:-200px -30vw;pointer-events:none;
   background:radial-gradient(ellipse 38% 34% at 34% 32%,rgba(14,14,17,.8),rgba(14,14,17,.45) 60%,transparent 100%),
              radial-gradient(ellipse 30% 16% at 32% 82%,rgba(14,14,17,.7),transparent 100%)}
-.enrol-sec .steps li{background:rgba(26,26,31,.9);border-color:rgba(255,255,255,.1)}
+.enrol-sec .steps li{background:rgba(22,22,26,.8);border-color:rgba(255,255,255,.12)}
 @media (max-width:699px){
-  .sec.dark.enrol-sec::before,.enrol-sec::after{background-size:auto 55%;background-repeat:repeat-y}
-  .enrol-sec .wrap::before{inset:-200px -16px;background:linear-gradient(transparent 120px,rgba(14,14,17,.72) 220px,rgba(14,14,17,.35) 520px,transparent 760px,transparent calc(100% - 420px),rgba(14,14,17,.7) calc(100% - 300px),transparent calc(100% - 140px))}
+  .sec.dark.enrol-sec::before,.enrol-sec::after{background-size:auto 42%;background-repeat:repeat-y}
+  .enrol-sec .wrap::before{inset:-200px -16px;background:linear-gradient(transparent 140px,rgba(14,14,17,.62) 230px,rgba(14,14,17,.2) 500px,transparent 640px,transparent calc(100% - 420px),rgba(14,14,17,.7) calc(100% - 300px),transparent calc(100% - 140px))}
 }
 
 /* smoother, calmer motion */
@@ -705,4 +705,17 @@ a.cbox:hover{transform:translateY(-3px);box-shadow:0 18px 36px -22px rgba(23,23,
   .js .hero-copy,.js .hero-art{transform:none!important;opacity:1!important}
   .js .levels .level{translate:none!important;scale:none!important}
   .sec.dark.enrol-sec::before,.enrol-sec::after{animation:none!important;translate:none!important}
+}
+/* header fit: the official lockup is wider; keep nav on one line (EN + AR) */
+.nav a,.head-cta,.lang a,.lang span{white-space:nowrap}
+@media (min-width:1100px){
+  .head-in{gap:12px}
+  .nav ul{gap:0}
+  .nav a{padding:10px 9px;font-size:15px}
+  [dir=rtl] .nav a{padding:10px 7px;font-size:15px}
+  .logo svg.brand{height:42px}
+}
+@media (min-width:1100px) and (max-width:1279px){
+  .head-cta{display:none}
+  [dir=rtl] .nav a{padding:10px 5px;font-size:14.5px}
 }
