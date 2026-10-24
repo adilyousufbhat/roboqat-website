@@ -7,7 +7,7 @@
    This is the ONLY place to set it. While it is empty (or still contains X), every booking button keeps its
    fallback link (the on-page form at #contact, or an email to info@roboqat.com) and the WhatsApp-only
    elements (floating button, WhatsApp contact card) stay hidden. Once a valid number is set they switch to WhatsApp. */
-var WA_NUMBER="";
+var WA_NUMBER="97470110220";
 var WA_TEXT={
  en:{book:"Hello RoboQAT, I would like to book a class for my child (age: ).",school:"Hello RoboQAT, I would like to talk about a school partnership."},
  ar:{book:"مرحبًا RoboQAT، أودّ حجز حصة لطفلي (العمر: ).",school:"مرحبًا RoboQAT، أودّ التحدث عن شراكة مع مدرستنا."}
@@ -26,7 +26,7 @@ if(WA_OK){
   a.target='_blank';a.rel='noopener';
  });
  $$('.wa-only').forEach(function(el){el.hidden=false});
- $$('.wa-num').forEach(function(el){el.textContent='+'+WA_NUMBER});
+ $$('.wa-num').forEach(function(el){if(!el.textContent.trim())el.textContent='+'+WA_NUMBER});
 }
 
 /* menu */
@@ -76,10 +76,17 @@ if('IntersectionObserver' in window&&!RM){
 
 /* scroll: progress bar, header state, journey fill, floating CTA */
 var head=$('.site-head'),bar=$('.progress span'),jt=$('#journey-track'),fab=$('.fab'),sticky=$('.sticky-cta'),hero=$('.hero'),contact=$('#contact'),play=$('#play');
-var ticking=false;
+var ticking=false,levels=$('#programmes .levels'),enrolS=$('#enrol'),clamp=function(v){return v<0?0:v>1?1:v};
+if(levels)$$('.level',levels).forEach(function(c,i){c.style.setProperty('--li',i)});
 function onScroll(){
  ticking=false;
- var y=window.scrollY,h=root.scrollHeight-innerHeight;
+ var y=window.scrollY,h=root.scrollHeight-innerHeight,vh=innerHeight;
+ /* v4.1 scroll-linked moments (transform/opacity only; skipped with reduced motion) */
+ if(!RM){
+  if(hero)hero.style.setProperty('--hp',clamp(y/(hero.offsetHeight||1)).toFixed(4));
+  if(levels){var lr=levels.getBoundingClientRect();levels.style.setProperty('--lp',clamp((vh-lr.top)/(vh*.75)).toFixed(4))}
+  if(enrolS){var er=enrolS.getBoundingClientRect();if(er.bottom>0&&er.top<vh)enrolS.style.setProperty('--fp',clamp((vh-er.top)/(vh+er.height)).toFixed(4))}
+ }
  if(bar)bar.parentNode.style.setProperty('--sp',h>0?(y/h).toFixed(4):0);
  head.classList.toggle('scrolled',y>10);
  if(jt){var r=jt.getBoundingClientRect(),p=(innerHeight*.75-r.top)/(r.height*.9);jt.style.setProperty('--p',Math.max(0,Math.min(1,p)).toFixed(3))}
