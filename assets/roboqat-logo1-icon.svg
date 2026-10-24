@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="220" viewBox="0 0 240 220">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="cc"><circle cx="110" cy="110" r="100"/></clipPath>
+  </defs>
+
+  <circle cx="110" cy="110" r="100" fill="#0A1628" stroke="#00D4FF" stroke-width="8"/>
+  <circle cx="110" cy="110" r="91"  fill="none"    stroke="#8B0000" stroke-width="2.5"/>
+
+  <!-- White stem only -->
+  <rect x="44" y="30" width="28" height="162" rx="8" fill="white" clip-path="url(#cc)"/>
+
+  <!-- D-shaped robot body -->
+  <path d="M 72 34 L 72 134 C 72 134 152 134 152 84 C 152 34 72 34 72 34 Z"
+        fill="#8B0000" clip-path="url(#cc)"/>
+
+  <!-- Inner face panel -->
+  <path d="M 80 44 L 80 124 C 80 124 140 124 140 84 C 140 44 80 44 80 44 Z"
+        fill="#6B0000" clip-path="url(#cc)"/>
+
+  <!-- Antenna -->
+  <line x1="112" y1="34" x2="112" y2="10" stroke="#FF6B2B" stroke-width="6" stroke-linecap="round" clip-path="url(#cc)"/>
+  <circle cx="112" cy="5"  r="10" fill="#FF6B2B" clip-path="url(#cc)"/>
+  <circle cx="112" cy="5"  r="4"  fill="#CC3300"  clip-path="url(#cc)"/>
+
+  <!-- Eyes -->
+  <circle cx="102" cy="74" r="10" fill="#00D4FF" filter="url(#glow)" clip-path="url(#cc)"/>
+  <circle cx="130" cy="74" r="10" fill="#00D4FF" filter="url(#glow)" clip-path="url(#cc)"/>
+  <circle cx="99"  cy="70" r="4"  fill="white"   clip-path="url(#cc)"/>
+  <circle cx="127" cy="70" r="4"  fill="white"   clip-path="url(#cc)"/>
+
+  <!-- Mouth -->
+  <rect x="92" y="100" rx="5" ry="5" width="46" height="10" fill="#FF6B2B" clip-path="url(#cc)"/>
+  <line x1="103" y1="100" x2="103" y2="110" stroke="#8B0000" stroke-width="2" clip-path="url(#cc)"/>
+  <line x1="115" y1="100" x2="115" y2="110" stroke="#8B0000" stroke-width="2" clip-path="url(#cc)"/>
+  <line x1="127" y1="100" x2="127" y2="110" stroke="#8B0000" stroke-width="2" clip-path="url(#cc)"/>
+
+  <!-- Arms -->
+  <rect x="62"  y="62" rx="5" ry="5" width="10" height="26" fill="#8B0000" stroke="white" stroke-width="2" clip-path="url(#cc)"/>
+  <rect x="152" y="62" rx="5" ry="5" width="10" height="26" fill="#8B0000" stroke="white" stroke-width="2" clip-path="url(#cc)"/>
+
+  <!-- Tail — diagonal, flows from bottom of D -->
+  <polygon points="80,134 134,134 180,196 122,196" fill="#8B0000" clip-path="url(#cc)"/>
+  <ellipse cx="151" cy="193" rx="22" ry="10" fill="#8B0000" clip-path="url(#cc)"/>
+</svg>
