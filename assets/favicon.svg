@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 -6 462 462"><rect x="64" y="-6" width="462" height="462" rx="96" fill="#fff"/><defs><clipPath id="rqf-in"><rect x="139.5" y="113" width="311" height="300.5" rx="75"/></clipPath></defs>
+<g class="rq-ant"><path d="M286.75 60V88Q286.75 99 275 99.6H314.5Q303.25 99 303.25 88V60Z" fill="#731D36"/><circle class="rq-bulb" cx="295" cy="38.5" r="27.5" fill="#731D36"/></g>
+<path d="M110.5 218.5V315.5H109A22 22 0 0 1 87 293.5V240.5A22 22 0 0 1 109 218.5Z" fill="#731D36"/>
+<path d="M479 218.5V315.5H480.5A22 22 0 0 0 502.5 293.5V240.5A22 22 0 0 0 480.5 218.5Z" fill="#731D36"/>
+<rect x="127" y="99" width="335.5" height="327.5" rx="88" fill="#731D36"/>
+<path clip-path="url(#rqf-in)" fill="#fff" d="M130 104H186.5L227 124.5L188 142L227 160.5L189 179.5L236 200.5H370.5A50 50 0 0 1 420.5 250.5V286A50 50 0 0 1 370.5 336H238L191 359.5L235 380.5L194 400L234 421H130Z"/>
+<rect x="178.5" y="212" width="231" height="112" rx="56" fill="#731D36"/>
+<g class="rq-eyes" fill="#fff"><rect x="224" y="239.5" width="31.5" height="57.5" rx="15.75"/><rect x="334" y="239.5" width="31.5" height="57.5" rx="15.75"/></g>
+<g fill="#fff"><rect x="270.5" y="358.4" width="48" height="3.9" rx="1.9"/><rect x="270.5" y="372.1" width="48" height="3.9" rx="1.9"/><rect x="270.5" y="385.6" width="48" height="3.9" rx="1.9"/></g></svg>
