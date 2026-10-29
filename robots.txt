@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.roboqat.com/sitemap.xml
+Sitemap: https://roboqat.com/sitemap.xml
